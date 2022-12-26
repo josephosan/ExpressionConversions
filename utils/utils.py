@@ -30,3 +30,4 @@ def is_brackets_valid(expression):
 def is_space_valid(expression):
     if " " in expression:
         return False
+    return True

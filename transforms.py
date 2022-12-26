@@ -15,8 +15,6 @@ def infixToPostfix(expression):
             stack.append(character)
         # when we reach this point, means we need pop from stack till we reach the '(' character.
         elif character == ')':
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             while stack and stack[-1] != '(':
                 output += stack.pop()
             stack.pop()  # pop the '(' character itself!
@@ -45,14 +43,10 @@ def infixToPrefix(expression):
         elif character == ')':
             stack.append(character)
         elif character == '(':
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             while stack and stack[-1] != ')':
                 output += stack.pop()
             stack.pop()
         else:
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             if stack and character == stack[-1] and character == '^':
                 output += stack.pop()
 
@@ -76,8 +70,6 @@ def postfixToInfix(expression):
         if character not in Operators:
             stack.append(character)
         else:
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             holder2 += stack.pop()
             holder1 += stack.pop()
             holder1 += character
@@ -100,8 +92,6 @@ def prefixToInfix(expression):
         if character not in Operators:
             stack.append(character)
         else:
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             holder1 = stack.pop()
             holder2 = stack.pop()
             holder2 += character
@@ -122,8 +112,6 @@ def postfixToPrefix(expression):
         if character not in Operators:
             stack.append(character)
         else:
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             holder2 = stack.pop()
             holder1 = stack.pop()
             holder1 = character+holder1
@@ -147,8 +135,6 @@ def prefixToPostfix(expression):
         if character not in Operators:
             stack.append(character)
         else:
-            if not stack:
-                raise Exception("Please enter a valid expression!")
             holder1 = stack.pop()
             holder2 = stack.pop()
             holder2 = holder2+character

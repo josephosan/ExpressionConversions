@@ -27,3 +27,8 @@ while True:
     print("Expression tree:")
     tree.print_tree(postfix_draw(result[2]))
     print("-----------------------------------\n")
+
+
+# Giant Prefix = ++++++++/*A+BCD/*A+BCD/*A+BCD/*A+BCD/*A+BCD/*A+BCD/*A+BCD/*A+BCD/*A+BCD
+# Giant Infix = A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D+A*(B+C)/D
+# Giant Postfix = ABC+*D/ABC+*D/+ABC+*D/+ABC+*D/+ABC+*D/+ABC+*D/+ABC+*D/+ABC+*D/+ABC+*D/+
